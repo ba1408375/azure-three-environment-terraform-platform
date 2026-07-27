@@ -1,0 +1,15 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+azure.tfstate
+azure.tfstate.*
+*.tfvars
+!*.tfvars.example
+*.pem
+crash.log
+crash.*.log
+faas/*.zip
+.second-project-review/
+*.tfplan
+.agents/
+.codex/

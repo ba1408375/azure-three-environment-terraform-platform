@@ -1,0 +1,38 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+  - name: ar-service
+    url: http://ar:80
+    routes:
+      - name: ar-route
+        paths: ["/ar"]
+        strip_path: true
+
+  - name: vr-service
+    url: http://vr:80
+    routes:
+      - name: vr-route
+        paths: ["/vr"]
+        strip_path: true
+
+  - name: tensorflow-serving
+    url: http://tensorflow-serving:8501
+    routes:
+      - name: ai-route
+        paths: ["/ai"]
+        strip_path: true
+
+  - name: video-hls
+    url: http://mediamtx:8888
+    routes:
+      - name: video-route
+        paths: ["/video"]
+        strip_path: true
+
+  - name: azure-function
+    url: ${jsonencode(faas_url)}
+    routes:
+      - name: faas-route
+        paths: ["/faas"]
+        strip_path: true

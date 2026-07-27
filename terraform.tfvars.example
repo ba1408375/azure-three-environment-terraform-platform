@@ -1,0 +1,28 @@
+# Copy this file to terraform.tfvars only after replacing every placeholder.
+# Prefer ARM_SUBSCRIPTION_ID in the environment instead of writing it here.
+
+request_id = "example01"
+
+mysql_root_password = "REPLACE_ME"
+mysql_database      = "appdb"
+mysql_user          = "appuser"
+mysql_password      = "REPLACE_ME"
+
+mariadb_root_password = "REPLACE_ME"
+mariadb_database      = "appdb"
+mariadb_user          = "appuser"
+mariadb_password      = "REPLACE_ME"
+
+postgres_user     = "appuser"
+postgres_password = "REPLACE_ME"
+postgres_database = "appdb"
+
+mongodb_user     = "admin"
+mongodb_password = "REPLACE_ME"
+jupyter_token    = "REPLACE_ME"
+
+# Leave empty to keep public SSH disabled.
+admin_allowed_cidrs = []
+
+# Add only trusted public IP ranges when browser/API access is needed.
+public_service_allowed_cidrs = []
